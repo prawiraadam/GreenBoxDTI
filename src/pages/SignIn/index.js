@@ -5,7 +5,7 @@ import {Input} from '../../components/molekul';
 import Gap from '../../components/atoms/Gap';
 import {Link} from '../../components/atoms';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View>
@@ -23,7 +23,7 @@ const SignIn = () => {
         <Link title="Lupa Password" size={12} />
       </TouchableOpacity>
       <Gap height={20} />
-      <Button title="Sign in" />
+      <Button title="Sign in" onPress={() => navigation.replace('MainPage')} />
       <Gap height={10} />
       <View style={styles.or}>
         <Text>OR</Text>
