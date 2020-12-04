@@ -19,18 +19,18 @@ const SignIn = ({navigation}) => {
       <Gap height={5} />
       <Input title="Password" />
       <Gap height={5} />
-      <TouchableOpacity>
-        <Link title="Lupa Password" size={12} />
-      </TouchableOpacity>
+      <Link title="Lupa Password" size={12} />
       <Gap height={20} />
       <Button title="Sign in" onPress={() => navigation.replace('MainPage')} />
       <Gap height={10} />
       <View style={styles.or}>
         <Text>OR</Text>
         <Gap height={10} />
-        <TouchableOpacity>
-          <Link title="Buat Akun Baru" size={16} />
-        </TouchableOpacity>
+        <Link
+          title="Buat Akun Baru"
+          size={16}
+          onPress={() => navigation.navigate('SignUp')}
+        />
       </View>
     </View>
   );

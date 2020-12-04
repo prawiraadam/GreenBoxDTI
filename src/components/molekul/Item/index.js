@@ -1,33 +1,32 @@
-import React from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
-import { Gap } from '../../atoms'
+import React from 'react';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {Gap} from '../../atoms';
 
-const Item = ({title, photo}) => {
+const Item = ({title, photo, onPress}) => {
   return (
     <View style={styles.component}>
-      <Image
-        style={styles.image} 
-        source={{ uri : photo}}
-      />
+      <TouchableOpacity onPress={onPress}>
+        <Image style={styles.image} source={{uri: photo}} />
+      </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>
-      <Gap height={20}/>
+      <Gap height={20} />
     </View>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
 
 const styles = StyleSheet.create({
   component: {
-    flex: 1
+    flex: 1,
   },
   image: {
     height: 200,
     width: 180,
-    borderRadius: 15
+    borderRadius: 15,
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });

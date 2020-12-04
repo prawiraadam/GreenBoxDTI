@@ -1,11 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-const Link = ({title, size}) => {
+const Link = ({title, size, onPress}) => {
   return (
-    <View>
+    <TouchableOpacity onPress={onPress}>
       <Text style={styles.text(size)}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
