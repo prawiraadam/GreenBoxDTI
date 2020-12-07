@@ -6,6 +6,8 @@ import Discover from './Discover';
 import Chart from './Chart';
 import Profile from './Profile';
 import DescriptionItem from './DescriptionItem';
+import PhotoProfile from './PhotoProfile';
+import List from './List';
 
 export {
   Splash,
@@ -16,4 +18,6 @@ export {
   Chart,
   Profile,
   DescriptionItem,
+  PhotoProfile,
+  List,
 };

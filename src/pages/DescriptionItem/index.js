@@ -40,16 +40,14 @@ const DescriptionItem = ({navigation}) => {
         <Text>Deskripsi</Text>
         <Gap height={10} />
         <View style={styles.info}>
-          <TouchableOpacity>
-            <Text>
-              Note Harap diperhatikan : 1. Lorem ipsum dolor sit
-              amet,consectetur adipiscing elit. Etiam blandit lacus sed ornare
-              vestibulum. Utid metus eget augue scelerisque luctus.2. Mauris eu
-              quam nec turpis porttitor dapibus efficitur et lorem. Aenean at
-              finibus orci. In molestie tincidunt vestibulum. 3. Praesent
-              vestibulum enim eget augue facilisis,
-            </Text>
-          </TouchableOpacity>
+          <Text>
+            Note Harap diperhatikan : 1. Lorem ipsum dolor sit amet,consectetur
+            adipiscing elit. Etiam blandit lacus sed ornare vestibulum. Utid
+            metus eget augue scelerisque luctus.2. Mauris eu quam nec turpis
+            porttitor dapibus efficitur et lorem. Aenean at finibus orci. In
+            molestie tincidunt vestibulum. 3. Praesent vestibulum enim eget
+            augue facilisis,
+          </Text>
         </View>
       </View>
       <View style={styles.footer}>
