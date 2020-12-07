@@ -1,25 +1,45 @@
-import React from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { Gap } from "../..";
+import { colors } from '../../../utils';
 
-const Input = ({title}) => {
+const Input = ({title, value, onChangeText, secureTextEntry, disable, placeholder}) => {
+  const [border, setBorder] = useState(colors.grey4);
+  const onFocusForm = () => {
+    setBorder(colors.green1);
+  };
+  const onBlurForm = () => {
+    setBorder(colors.grey4);
+  };
   return (
     <View>
-      <Text style={styles.text}>{title}</Text>
-      <TextInput style={styles.input} />
+      <Text style={styles.title}>{title}</Text>
+      <Gap height={5}/>
+      <TextInput 
+        onFocus={onFocusForm} 
+        onBlur={onBlurForm} 
+        style={styles.input(border)}
+        value={value}
+        placeholder={placeholder}
+        onChangeText={onChangeText}
+        secureTextEntry={secureTextEntry}
+        editable={!disable}
+        selectTextOnFocus={!disable}
+      />
     </View>
-  );
-};
+  )
+}
 
 export default Input;
 
 const styles = StyleSheet.create({
-  input: {
-    borderWidth: 1,
-    borderColor: '#27ae60',
-    borderRadius: 10,
-    paddingHorizontal: 15,
-    fontSize: 16,
-    backgroundColor: '#c8d6e5',
+  title: {
+    color: colors.grey1
   },
-  text: {fontSize: 16, color: '#7D8797', marginBottom: 6},
+  input: (border) => ({
+    borderWidth: 2,
+    borderColor: border,
+    borderRadius: 10,
+    padding: 10
+  }),
 });

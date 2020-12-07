@@ -12,21 +12,28 @@ import {Button, Gap} from '../../components/atoms';
 const GetStarted = ({navigation}) => {
   return (
     <View>
+      {/* image background */}
       <ImageBackground source={ILGetStrated} style={styles.background}>
         <View style={styles.screen}>
           <ILLogo />
         </View>
       </ImageBackground>
+
+      {/* section get started & sign in */}
       <View style={styles.page}>
         <Text style={styles.text}>Daily Fresh!</Text>
         <Gap height={5} />
+
+        {/* button get started */}
         <Button
-          title="Sign Up"
+          title="Get Started"
           onPress={() => {
             navigation.navigate('SignUp');
           }}
         />
         <Gap height={25} />
+
+        {/* section sign in */}
         <View style={{flexDirection: 'row', justifyContent: 'center'}}>
           <Text style={styles.signup}>Sudah Punya Akun?</Text>
           <TouchableOpacity>
@@ -40,6 +47,7 @@ const GetStarted = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
+      
     </View>
   );
 };

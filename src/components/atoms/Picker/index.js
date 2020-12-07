@@ -1,26 +1,39 @@
-import React, {Component} from 'react';
-import {View, Text, Picker, StyleSheet} from 'react-native';
+import React, { useState } from "react";
+import { View, StyleSheet, Text } from "react-native";
+import { Picker } from "@react-native-community/picker";
+import { colors } from '../../../utils';
+import { Gap } from "../../../components";
 
-class Pickers extends Component {
-  state = {user: ''};
-  updateUser = (user) => {
-    this.setState({user: user});
-  };
-  render() {
-    return (
-      <View>
-        <Text style={styles.text}>Pekerjaan</Text>
-        <Picker selectedValue={this.state.user} onValueChange={this.updateUser}>
-          <Picker.Item label="-- Pilih Pekerjaan Anda --" value="null" />
-          <Picker.Item label="Petani" value="petani" />
-          <Picker.Item label="Distributor" value="distributor" />
+const Pickers = ({title}) => {
+  const [selectedValue, setSelectedValue] = useState("Petani");
+  return (
+    <View>
+      <Text style={styles.title}>{title}</Text>
+      <Gap height={5}/>
+      <View style={styles.container}>
+        <Picker
+          selectedValue={selectedValue}
+          style={{ height: 50, width: '100%'}}
+          onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+        >
+          <Picker.Item label="Petani" value="farmer" />
+          <Picker.Item label="Distributor" value="supplier" />
         </Picker>
       </View>
-    );
-  }
+    </View>
+  );
 }
+
 export default Pickers;
 
 const styles = StyleSheet.create({
-  text: {fontSize: 16, color: '#7D8797', marginBottom: 6},
+  title: {
+    color: colors.grey1
+  },
+  container: {
+    borderColor: colors.grey4,
+    borderWidth: 2,
+    borderRadius: 10
+  }
 });
+

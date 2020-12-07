@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { colors } from "../../../utils";
 
 const Link = ({title, size, onPress}) => {
   return (
@@ -14,7 +15,7 @@ export default Link;
 const styles = StyleSheet.create({
   text: (size) => ({
     fontSize: size,
-    color: '#7D8797',
+    color: colors.green1,
     textDecorationLine: 'underline',
   }),
 });

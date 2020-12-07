@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, FlatList, View, Image} from 'react-native';
 import {Button, Gap} from '../../components/atoms';
-import Header from '../../components/molekul/header';
+import Header from '../../components/molekul/Header';
 
 const DATA = [
   {

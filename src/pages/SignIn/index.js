@@ -1,13 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import Button from '../../components/atoms/Button';
-import {Input} from '../../components/molekul';
-import Gap from '../../components/atoms/Gap';
-import {Link} from '../../components/atoms';
+import {StyleSheet, Text, View} from 'react-native';
+import { Button, Input, Gap, Link } from "../../components";
 
 const SignIn = ({navigation}) => {
   return (
     <View style={styles.page}>
+      
+      {/* title text */}
       <View>
         <Text style={styles.title}>Get the veggies!</Text>
         <Text style={styles.subtitle}>
@@ -15,14 +14,20 @@ const SignIn = ({navigation}) => {
         </Text>
         <Gap height={20} />
       </View>
+      
+      {/* form email and password */}
       <Input title="Email" />
-      <Gap height={5} />
+      <Gap height={10} />
       <Input title="Password" />
       <Gap height={5} />
       <Link title="Lupa Password" size={12} />
       <Gap height={20} />
+
+      {/* button sign in */}
       <Button title="Sign in" onPress={() => navigation.replace('MainPage')} />
-      <Gap height={10} />
+      <Gap height={15} />
+
+      {/* section navigate to register */}
       <View style={styles.or}>
         <Text>OR</Text>
         <Gap height={10} />
@@ -31,7 +36,9 @@ const SignIn = ({navigation}) => {
           size={16}
           onPress={() => navigation.navigate('SignUp')}
         />
+
       </View>
+
     </View>
   );
 };

@@ -1,5 +1,5 @@
-import Header from './header';
-import Input from './input';
+import Header from './Header';
+import Input from './Input';
 import BottomNavigator from './BottomNavigator';
 import SearchInput from './searchInput';
 import Item from './Item';
