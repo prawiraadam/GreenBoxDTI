@@ -11,6 +11,7 @@ import {
   Chart,
   Profile,
   DescriptionItem,
+  UpdateProfile,
 } from '../pages';
 
 const Tab = createBottomTabNavigator();
@@ -59,6 +60,13 @@ const Router = () => {
       <Stack.Screen
         name="DescriptionItem"
         component={DescriptionItem}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="UpdateProfile"
+        component={UpdateProfile}
         options={{
           headerShown: false,
         }}

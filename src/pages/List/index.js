@@ -2,9 +2,9 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {IconForward} from '../../assets/icon';
 
-const List = ({title, type}) => {
+const List = ({title, type, onPress}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View>
         <Text style={styles.text}>{title}</Text>
       </View>

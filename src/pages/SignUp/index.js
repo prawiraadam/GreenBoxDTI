@@ -12,7 +12,9 @@ import {colors} from '../../utils';
 
 const SignUp = ({navigation}) => {
   return (
-    <ScrollView contentContainerStyle={styles.screen}>
+    <ScrollView
+      contentContainerStyle={styles.screen}
+      showsVerticalScrollIndicator={false}>
       <View style={styles.logoContainer}>
         <Gap height={20} />
         <ILLogo />

@@ -8,6 +8,7 @@ import Profile from './Profile';
 import DescriptionItem from './DescriptionItem';
 import PhotoProfile from './PhotoProfile';
 import List from './List';
+import UpdateProfile from './UpdateProfile';
 
 export {
   Splash,
@@ -20,4 +21,5 @@ export {
   DescriptionItem,
   PhotoProfile,
   List,
+  UpdateProfile,
 };

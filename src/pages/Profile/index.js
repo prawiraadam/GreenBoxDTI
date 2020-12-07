@@ -5,7 +5,7 @@ import List from '../List';
 import PhotoProfile from '../PhotoProfile';
 import {Button, Gap} from '../../components/atoms';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({navigation}) => {
   return (
     <View style={styles.page}>
       <PhotoProfile
@@ -14,7 +14,12 @@ const ProfileScreen = () => {
         role="Distributor"
       />
       <Gap height={10} />
-      <List title="Edit Profile" type="next" />
+      <List
+        title="Edit Profile"
+        type="next"
+        onPress={() => navigation.navigate('UpdateProfile')}
+        goBack
+      />
       <List title="Language" type="next" />
       <List title="My Store" type="next" />
       <Gap height={50} />
