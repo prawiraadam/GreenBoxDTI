@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import {ILGetStrated, ILLogo} from '../../assets';
-import {Button, Gap} from '../../components/atoms';
+import {Button, Gap} from '../../components';
 
 const GetStarted = ({navigation}) => {
   return (
