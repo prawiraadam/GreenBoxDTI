@@ -1,18 +1,24 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View, TouchableHighlight} from 'react-native';
-import { Input, Button, Gap, Pickers, Link } from "../../components";
-import { ILLogo } from "../../assets";
-import { colors } from "../../utils";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight,
+} from 'react-native';
+import {Input, Button, Gap, Pickers, Link} from '../../components';
+import {ILLogo} from '../../assets';
+import {colors} from '../../utils';
 
 const SignUp = ({navigation}) => {
   return (
     <ScrollView contentContainerStyle={styles.screen}>
       <View style={styles.logoContainer}>
-        <Gap height={20}/>
-        <ILLogo/>
-        <Gap height={20}/>
+        <Gap height={20} />
+        <ILLogo />
+        <Gap height={20} />
         <Text style={styles.title}>Register</Text>
-        <Gap height={20}/>
+        <Gap height={20} />
       </View>
 
       <View style={styles.inputContainer}>
@@ -22,13 +28,13 @@ const SignUp = ({navigation}) => {
         <Gap height={10} />
         <Input title="Password" />
         <Gap height={10} />
-        <Pickers title="Pekerjaan"/>
+        <Pickers title="Pekerjaan" />
         <Gap height={20} />
-        <Button 
+        <Button
           title="Selanjutnya"
           onPress={() => navigation.replace('MainPage')}
         />
-        <Gap height={20}/>
+        <Gap height={20} />
       </View>
 
       <View style={styles.signinContainer}>
@@ -38,6 +44,7 @@ const SignUp = ({navigation}) => {
           size={12}
           onPress={() => navigation.navigate('SignIn')}
         />
+        <Gap height={50} />
       </View>
     </ScrollView>
   );
@@ -46,14 +53,14 @@ const SignUp = ({navigation}) => {
 export default SignUp;
 
 const styles = StyleSheet.create({
-  screen: {backgroundColor: 'white', flex: 1},
-  logoContainer: { marginLeft: 40},
+  screen: {backgroundColor: 'white'},
+  logoContainer: {marginLeft: 40},
   title: {
     fontSize: 32,
     fontWeight: '700',
-    color: colors.green1
+    color: colors.green1,
   },
   inputContainer: {paddingHorizontal: 40},
   signinContainer: {justifyContent: 'center', flexDirection: 'row'},
-  haveAcc: {fontSize: 12, textAlign: 'center'}
+  haveAcc: {fontSize: 12, textAlign: 'center'},
 });

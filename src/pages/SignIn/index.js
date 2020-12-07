@@ -1,11 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import { Button, Input, Gap, Link } from "../../components";
+import {Button, Input, Gap, Link} from '../../components';
 
 const SignIn = ({navigation}) => {
   return (
     <View style={styles.page}>
-      
       {/* title text */}
       <View>
         <Text style={styles.title}>Get the veggies!</Text>
@@ -14,7 +13,7 @@ const SignIn = ({navigation}) => {
         </Text>
         <Gap height={20} />
       </View>
-      
+
       {/* form email and password */}
       <Input title="Email" />
       <Gap height={10} />
@@ -36,9 +35,7 @@ const SignIn = ({navigation}) => {
           size={16}
           onPress={() => navigation.navigate('SignUp')}
         />
-
       </View>
-
     </View>
   );
 };
