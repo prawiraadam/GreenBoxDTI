@@ -1,7 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {SliderBox} from 'react-native-image-slider-box';
-import {Counter, Gap, Header} from '../../components';
+import {Counter, Footer, Gap, Header} from '../../components';
 
 const DescriptionItem = ({navigation}) => {
   const images = [
@@ -11,60 +11,49 @@ const DescriptionItem = ({navigation}) => {
   ];
 
   return (
-    <View>
-      <Header title="Kangkung" onPress={() => navigation.goBack()} />
-      <SliderBox
-        images={images}
-        sliderBoxHeight={230}
-        dotColor="#27ae60"
-        inactiveDotColor="#90A4AE"
-        dotStyle={{
-          width: 15,
-          height: 15,
-          borderRadius: 15,
-          padding: 0,
-          margin: 0,
-        }}
-      />
-      <View style={styles.item}>
-        <View>
-          <Text style={styles.title}>Kangkung</Text>
-          <Text style={styles.subtitle}>Rp. 6.000, -/200gr</Text>
-          <Text>Sayur Segar Bandung</Text>
+    <View style={styles.page}>
+      <Header title="Kangkung" goBack />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <SliderBox
+          images={images}
+          sliderBoxHeight={230}
+          dotColor="#27ae60"
+          inactiveDotColor="#90A4AE"
+          dotStyle={{
+            width: 15,
+            height: 15,
+            borderRadius: 15,
+            padding: 0,
+            margin: 0,
+          }}
+        />
+        <View style={styles.item}>
+          <View>
+            <Text style={styles.title}>Kangkung</Text>
+            <Text style={styles.subtitle}>Rp. 6.000, -/200gr</Text>
+            <Text>Sayur Segar Bandung</Text>
+          </View>
+          <View>
+            <Counter />
+          </View>
         </View>
-        <View>
-          <Counter />
+        <View style={styles.desc}>
+          <Text>Deskripsi</Text>
+          <Gap height={10} />
+          <View style={styles.info}>
+            <Text>
+              Note Harap diperhatikan : 1. Lorem ipsum dolor sit
+              amet,consectetur adipiscing elit. Etiam blandit lacus sed ornare
+              vestibulum. Utid metus eget augue scelerisque luctus.2. Mauris eu
+              quam nec turpis porttitor dapibus efficitur et lorem. Aenean at
+              finibus orci. In molestie tincidunt vestibulum. 3. Praesent
+              vestibulum enim eget augue
+              facilisis,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.desc}>
-        <Text>Deskripsi</Text>
-        <Gap height={10} />
-        <View style={styles.info}>
-          <Text>
-            Note Harap diperhatikan : 1. Lorem ipsum dolor sit amet,consectetur
-            adipiscing elit. Etiam blandit lacus sed ornare vestibulum. Utid
-            metus eget augue scelerisque luctus.2. Mauris eu quam nec turpis
-            porttitor dapibus efficitur et lorem. Aenean at finibus orci. In
-            molestie tincidunt vestibulum. 3. Praesent vestibulum enim eget
-            augue facilisis,
-          </Text>
-        </View>
-      </View>
-      <View style={styles.footer}>
-        <View>
-          <Text>Total</Text>
-          <Text>Rp. 20.000</Text>
-        </View>
-        <View style={styles.button}>
-          <TouchableOpacity>
-            <Text style={styles.direct}>Buy Direct</Text>
-          </TouchableOpacity>
-          <Gap width={20} />
-          <TouchableOpacity>
-            <Text style={styles.basket}>+ Basket</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      </ScrollView>
+      <Footer />
     </View>
   );
 };
@@ -72,48 +61,26 @@ const DescriptionItem = ({navigation}) => {
 export default DescriptionItem;
 
 const styles = StyleSheet.create({
+  page: {flex: 1},
   item: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    margin: 15,
-    borderBottomWidth: 0.5,
+    margin: 10,
     paddingBottom: 20,
     alignItems: 'center',
-    marginTop: 8,
+
+    backgroundColor: 'white',
+    padding: 10,
+    borderRadius: 10,
   },
-  desc: {margin: 15, marginTop: 2},
+  desc: {
+    margin: 10,
+    marginTop: 2,
+    backgroundColor: 'white',
+    padding: 10,
+    borderRadius: 10,
+  },
   title: {fontSize: 22, fontWeight: '600', marginBottom: 4},
   subtitle: {fontSize: 16, fontWeight: '600', marginBottom: 4},
-  info: {textAlign: 'center', marginBottom: 15},
-  footer: {
-    flexDirection: 'row',
-    backgroundColor: '#C4C4C4',
-    height: 82,
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-  },
-  button: {flexDirection: 'row'},
-  direct: {
-    borderWidth: 1,
-    backgroundColor: 'white',
-    color: '#0BB407',
-    paddingVertical: 5,
-    paddingHorizontal: 10,
-    borderRadius: 10,
-    borderColor: '#0BB407',
-    fontWeight: '600',
-    fontSize: 16,
-  },
-  basket: {
-    borderWidth: 1,
-    backgroundColor: '#0BB407',
-    color: 'white',
-    paddingVertical: 5,
-    paddingHorizontal: 18,
-    borderRadius: 10,
-    borderColor: '#0BB407',
-    fontWeight: '600',
-    fontSize: 16,
-  },
+  info: {textAlign: 'center'},
 });
