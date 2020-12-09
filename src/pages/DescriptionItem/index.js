@@ -3,7 +3,8 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import {Footer, Header} from '../../components';
 import DescItem from '../../components/molekul/DescItem';
 
-const DescriptionItem = ({navigation}) => {
+const DescriptionItem = ({ route }) => {
+  const { item } = route.params;
   const ItemList = [
     {
       id: '1',
@@ -27,22 +28,15 @@ const DescriptionItem = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={styles.screen}>
-        {ItemList.map((item, index) => {
-          return (
-            <ScrollView showsVerticalScrollIndicator={false}>
-              <Header title={item.title} goBack />
-              <DescItem
-                key={item.id}
-                title={item.title}
-                images={item.images}
-                price={item.price}
-                unit={item.unit}
-                store={item.store}
-                desc={item.desc}
-              />
-            </ScrollView>
-          );
-        })}
+        <Header title={item.title} goBack />
+          <DescItem
+            title={item.title}
+            images={item.images}
+            price={item.price}
+            unit={item.unit}
+            store={item.store}
+            desc={item.desc}
+          />
       </View>
       <Footer />
     </View>

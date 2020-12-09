@@ -29,7 +29,6 @@ export default Item;
 
 const styles = StyleSheet.create({
   component: {
-    // flex: 1,
     width: '50%'
   },
   imageContainer: {
