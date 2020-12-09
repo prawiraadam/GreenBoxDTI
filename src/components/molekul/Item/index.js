@@ -1,14 +1,25 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import {Gap} from '../../atoms';
+import {Gap, Rating} from '../../atoms';
+import { IconStore } from "../../../assets";
 
-const Item = ({title, photo, onPress}) => {
+const Item = ({title, photo, onPress, price, unit, store, rating }) => {
   return (
     <View style={styles.component}>
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity onPress={onPress} style={styles.imageContainer}>
         <Image style={styles.image} source={{uri: photo}} />
       </TouchableOpacity>
-      <Text style={styles.title}>{title}</Text>
+      <View style={styles.descContainer}>
+        <Text style={styles.title}>{title}</Text>
+        <Text>Rp. {price}/{unit}</Text>
+        <View style={styles.storeContainer}>
+          <Gap height={5}/>
+          <Image source={IconStore} style={styles.storeIcon}/>
+          <Text>{store}</Text>
+        </View>
+        <Gap height={5}/>
+        <Rating value={rating}/>
+      </View>
       <Gap height={20} />
     </View>
   );
@@ -18,15 +29,31 @@ export default Item;
 
 const styles = StyleSheet.create({
   component: {
-    flex: 1,
+    // flex: 1,
+    width: '50%'
+  },
+  imageContainer: {
+    marginLeft: 20
   },
   image: {
-    height: 200,
-    width: 180,
-    borderRadius: 15,
+    height: 150,
+    width: 150,
+    borderRadius: 10,
+    alignItems: 'center'
+  },
+  descContainer: {
+    marginLeft: 20
   },
   title: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
+  },
+  storeContainer: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  storeIcon: {
+    height: 20,
+    width: 20
   },
 });

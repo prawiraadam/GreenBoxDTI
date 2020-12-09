@@ -26,6 +26,7 @@ export default SearchInput
 const styles = StyleSheet.create({
   component: {
     margin: 10,
+    marginLeft: 20,
     padding: 5,
     borderWidth: 2,
     borderColor: "#27AE60",

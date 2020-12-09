@@ -12,6 +12,9 @@ import {
   Profile,
   DescriptionItem,
   UpdateProfile,
+  HomeFarmer,
+  OrderFarmer,
+  ProfileFarmer
 } from '../pages';
 
 const Tab = createBottomTabNavigator();
@@ -23,6 +26,16 @@ const BottomTabNavigator = () => {
       <Tab.Screen name="Discover" component={Discover} />
       <Tab.Screen name="Chart" component={Chart} />
       <Tab.Screen name="Profile" component={Profile} />
+    </Tab.Navigator>
+  );
+};
+
+const BottomTabNavigatorFarmer = () => {
+  return (
+    <Tab.Navigator tabBar={(props) => <BottomNavigator {...props} />}>
+      <Tab.Screen name="HomeFarmer" component={HomeFarmer} />
+      <Tab.Screen name="OrderFarmer" component={OrderFarmer} />
+      <Tab.Screen name="ProfileFarmer" component={ProfileFarmer} />
     </Tab.Navigator>
   );
 };
@@ -53,6 +66,13 @@ const Router = () => {
       <Stack.Screen
         name="MainPage"
         component={BottomTabNavigator}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="MainPageFarmer"
+        component={BottomTabNavigatorFarmer}
         options={{
           headerShown: false,
         }}

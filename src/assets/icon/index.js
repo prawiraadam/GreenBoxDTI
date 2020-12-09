@@ -8,6 +8,12 @@ import IconProfileInactive from './ic_profile_inactive.png';
 import IconAddCounter from './add.svg';
 import IconMinusCounter from './minus.svg';
 import IconForward from './icons8-forward-100 1.svg';
+import IconListActive from "./ic_list_active.png";
+import IconListInactive from "./ic_list_inactive.png";
+import IconOrderActive from "./ic_order_active.png";
+import IconOrderInactive from "./ic_order_inactive.png";
+import IconStore from "./ic_store.png";
+import IconStar from "./ic_star.png";
 
 export {
   IconBack,
@@ -20,4 +26,10 @@ export {
   IconAddCounter,
   IconMinusCounter,
   IconForward,
+  IconListActive,
+  IconListInactive,
+  IconOrderActive,
+  IconOrderInactive,
+  IconStore,
+  IconStar
 };

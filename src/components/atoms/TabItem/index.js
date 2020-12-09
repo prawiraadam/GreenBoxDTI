@@ -1,6 +1,17 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { IconDiscoverActive, IconDiscoverInactive, IconChartActive, IconChartInactive, IconProfileActive, IconProfileInactive } from '../../../assets';
+import { 
+  IconDiscoverActive, 
+  IconDiscoverInactive, 
+  IconChartActive, 
+  IconChartInactive, 
+  IconProfileActive, 
+  IconProfileInactive,
+  IconListActive,
+  IconListInactive,
+  IconOrderActive,
+  IconOrderInactive 
+} from '../../../assets';
 
 const TabItem = ({title, active, onPress, onLongPress}) => {
   return (
@@ -20,6 +31,18 @@ const TabItem = ({title, active, onPress, onLongPress}) => {
       {title === "Profile" && <Image
         style={styles.image}
         source={active ? IconProfileActive : IconProfileInactive}
+      />}
+      {title === 'ProfileFarmer' && <Image
+        style={styles.image}
+        source={active ? IconProfileActive : IconProfileInactive}
+      />}
+      {title === "HomeFarmer" && <Image
+        style={styles.image}
+        source={active ? IconListActive : IconListInactive}
+      />}
+      {title === "OrderFarmer" && <Image
+        style={styles.image}
+        source={active ? IconOrderActive : IconOrderInactive}
       />}
     </TouchableOpacity>
   )
