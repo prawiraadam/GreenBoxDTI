@@ -14,7 +14,8 @@ import {
   UpdateProfile,
   HomeFarmer,
   OrderFarmer,
-  ProfileFarmer
+  ProfileFarmer,
+  PaymentMethod,
 } from '../pages';
 
 const Tab = createBottomTabNavigator();
@@ -87,6 +88,13 @@ const Router = () => {
       <Stack.Screen
         name="UpdateProfile"
         component={UpdateProfile}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="PaymentMethod"
+        component={PaymentMethod}
         options={{
           headerShown: false,
         }}

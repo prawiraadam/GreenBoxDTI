@@ -7,5 +7,17 @@ import Footer from './Footer';
 import SliderBox from './SliderBox';
 import TileStockItem from './TileStockItem';
 import TileOrder from './TileOrder';
+import PaymentListBank from './PaymentListBank';
 
-export {Header, Input, BottomNavigator, SearchInput, Item, Footer, SliderBox, TileStockItem, TileOrder};
+export {
+  Header,
+  Input,
+  BottomNavigator,
+  SearchInput,
+  Item,
+  Footer,
+  SliderBox,
+  TileStockItem,
+  TileOrder,
+  PaymentListBank,
+};
