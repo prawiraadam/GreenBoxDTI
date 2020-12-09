@@ -1,116 +1,158 @@
-import React from 'react';
-import {StyleSheet, Text, FlatList, View, Image} from 'react-native';
-import {Button, Gap, Header} from '../../components';
+import React, { useState } from 'react';
+import { StyleSheet, Text, FlatList, View, Image} from 'react-native';
+import {Button, Gap} from '../../components/atoms';
+import Header from '../../components/molekul/Header';
+import CheckBox from '@react-native-community/checkbox';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { colors } from "../../utils/colors";
 
-const DATA = [
-  {
-    id: 'order1',
-    photo: '../../assets/illustration/quinoa-salad.jpg',
-    name: 'Quinoa fruit salad',
-    qty: 1,
-    price: 10000,
-  },
-  {
-    id: 'order2',
-    photo: '../../assets/illustration/quinoa-salad.jpg',
-    name: 'Quinoa fruit salad #2',
-    qty: 2,
-    price: 20000,
-  },
-  {
-    id: 'order3',
-    photo: '../../assets/illustration/quinoa-salad.jpg',
-    name: 'Quinoa fruit salad #3',
-    qty: 3,
-    price: 30000,
-  },
-];
+const DATA =[
+    {
+        id: 'order1',
+        photo: 'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        name: 'Kangkung',
+        qty: 1,
+        price: 2000
+    },
+    {
+        id: 'order2',
+        photo: 'https://ecs7.tokopedia.net/img/cache/700/product-1/2020/4/4/67339064/67339064_0e9a5822-c3db-49fb-be1a-ea1f3ad177e4_336_336.jpg',
+        name: 'Bayam',
+        qty: 2,
+        price: 1500
+    },
+    {
+        id: 'order3',
+        photo: 'https://ecs7-p.tokopedia.net/img/cache/200-square/product-1/2020/4/14/4419158/4419158_5757671e-8cb6-4bf7-b1e3-9aaa388dbaef_748_748.jpg',
+        name: 'Kacang Panjang',
+        qty: 3,
+        price: 3000
+    },
+]
 
-const Chart = ({navigation}) => {
-  return (
-    <View style={styles.page}>
-      <Header title="My Basket" onPress={() => navigation.goBack()} />
-      <Gap height={20} />
-      <FlatList
-        keyExtractor={(item) => item.id}
-        data={DATA}
-        renderItem={({item}) => (
-          <View style={styles.orderLayout}>
-            <Image
-              style={styles.orderImage}
-              source={require('../../assets/illustration/quinoa-salad.jpg')}
+const Item = ({ id, photo, name, price }) => {
+    const [unSelected, setSelected] = useState(false);
+
+    return (
+        <View style={styles.orderLayout}>
+            <CheckBox 
+                value = {unSelected}
+                onValueChange={(newValue) => setSelected(newValue, id)}
+            />
+            <Image 
+                style={styles.orderImage}
+                source={{uri: photo}}
             />
             <View style={styles.itemText}>
-              <Text>{item.name}</Text>
-              <Text>{item.qty} pcs</Text>
+                <Text style={{fontWeight: 'bold'}}>{name}</Text>
+                <Text>Rp. {price},- /ikat</Text>
+                <View style={styles.quantity}>
+                    <Ionicons name="remove-outline" size={20} color={colors.green1} />
+                    <Text>2</Text>
+                    <Ionicons name="add-outline" size={20} color={colors.green1}/>
+                </View>
             </View>
-            <Text>Rp {item.price}</Text>
-          </View>
-        )}
-      />
-      <View style={styles.footer}>
-        <View style={{flex: 1}}>
-          <Text>Total</Text>
-          <Text>Rp 60000</Text>
         </View>
+    )
+}
 
-        <View style={{flex: 1.5}}>
-          <Button
-            title="Checkout"
-            onPress={() => {
-              //Ke Halaman order
-            }}
-          />
+const Chart = ({ navigation }) => {
+    const [unSelected, setSelected] = useState(false);
+
+    return (
+        <View style={styles.page}>
+            <Header title="My Basket"/>
+            <Gap height={10}/>
+            <FlatList 
+                data={DATA}
+                renderItem = { ({ item }) => (
+                    <Item 
+                        id = {item.id} 
+                        photo = {item.photo}
+                        name = {item.name}
+                        price = {item.price}
+                    />
+                )}
+            />
+            <View style={styles.footer}>
+                <CheckBox 
+                    style={{flex: 0.5}}
+                    value={unSelected}
+                    onValueChange={(newValue) => setSelected(newValue)}
+                />
+                <Text style={{flex: 1}}>All</Text>
+
+                <View style={{flex: 1}}>
+                    <Text>Total</Text>
+                    <Text>Rp 60000</Text>
+                </View>
+                
+                <View style={{flex: 1.5}}> 
+                    <Button
+                        title='Checkout'
+                        onPress={() => {
+                            navigation.navigate('Checkout')
+                        }}
+                    />
+                </View>
+            </View>
         </View>
-      </View>
-    </View>
-  );
+    );
 };
 
 export default Chart;
 
 const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
-  header: {
-    padding: 28,
-    marginBottom: 20,
-    flexDirection: 'row',
-    backgroundColor: '#27ae60',
-    alignItems: 'center',
-  },
-  titleText: {
-    color: '#FFFFFF',
-    fontSize: 20,
-  },
-  headerItem: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  footer: {
-    marginHorizontal: 28,
-    marginBottom: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  orderLayout: {
-    marginHorizontal: 20,
-    marginBottom: 20,
-    padding: 8,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  orderImage: {
-    height: 50,
-    width: 50,
-    marginRight: 16,
-  },
-  itemText: {
-    alignItems: 'flex-start',
-    flex: 2,
-  },
+    page:{
+        flex: 1
+    },
+    header: {
+        padding: 28,
+        marginBottom: 20,
+        flexDirection: 'row',
+        backgroundColor: '#27ae60',
+        alignItems: 'center'
+    },
+    titleText: {
+        color: '#FFFFFF',
+        fontSize: 20
+    },
+    headerItem: {
+        flex:1, 
+        alignItems: 'center'
+    },
+    footer: {
+        marginHorizontal: 28,
+        marginBottom: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    orderLayout: {
+        marginHorizontal: 20,
+        marginBottom: 20,
+        padding: 8,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    orderImage: {
+        height: 80,
+        width: 80,
+        marginRight: 12,
+        marginLeft: 8,
+        borderRadius: 8
+    },
+    itemText: {
+        alignItems: 'flex-start',
+        justifyContent: 'space-around',
+        height: 80,
+        flex: 2
+    },
+    quantity:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '35%'
+    }
 });

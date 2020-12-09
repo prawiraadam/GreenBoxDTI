@@ -9,6 +9,7 @@ import {
   Splash,
   Discover,
   Chart,
+  Checkout,
   Profile,
   DescriptionItem,
   UpdateProfile,
@@ -87,6 +88,13 @@ const Router = () => {
       <Stack.Screen
         name="UpdateProfile"
         component={UpdateProfile}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen 
+        name="Checkout"
+        component={Checkout}
         options={{
           headerShown: false,
         }}

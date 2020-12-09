@@ -4,6 +4,7 @@ import SignUp from './SignUp';
 import SignIn from './SignIn';
 import Discover from './Discover';
 import Chart from './Chart';
+import Checkout from './Checkout'
 import Profile from './Profile';
 import DescriptionItem from './DescriptionItem';
 import PhotoProfile from './PhotoProfile';
@@ -20,6 +21,7 @@ export {
   SignIn,
   Discover,
   Chart,
+  Checkout,
   Profile,
   DescriptionItem,
   PhotoProfile,
