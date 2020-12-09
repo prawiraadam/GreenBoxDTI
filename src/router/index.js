@@ -42,7 +42,7 @@ const BottomTabNavigatorFarmer = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Splash">
+    <Stack.Navigator initialRouteName="MainPageFarmer">
       <Stack.Screen
         name="Splash"
         component={Splash}

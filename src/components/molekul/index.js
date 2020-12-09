@@ -5,5 +5,7 @@ import SearchInput from './searchInput';
 import Item from './Item';
 import Footer from './Footer';
 import SliderBox from './SliderBox';
+import TileStockItem from './TileStockItem';
+import TileOrder from './TileOrder';
 
-export {Header, Input, BottomNavigator, SearchInput, Item, Footer, SliderBox};
+export {Header, Input, BottomNavigator, SearchInput, Item, Footer, SliderBox, TileStockItem, TileOrder};
