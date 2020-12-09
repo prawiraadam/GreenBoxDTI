@@ -17,6 +17,7 @@ const DescriptionItem = ({ route }) => {
             unit={item.unit}
             store={item.store}
             desc={item.desc}
+            rating={item.rating}
           />
       </View>
       <Footer />
