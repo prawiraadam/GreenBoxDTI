@@ -112,9 +112,10 @@ const DiscoverScreen = ({navigation}) => {
         {/* List Item */}
         <View style={{flexDirection: 'row', flexWrap: 'wrap', marginLeft: 10}}>
           <View style={styles.list}>
-            {ItemList.map(item => {
+            {ItemList.map((item, index) => {
               return(
                 <Item
+                  key={index}
                   title={item.title}
                   photo={item.photo}
                   price={item.price}
