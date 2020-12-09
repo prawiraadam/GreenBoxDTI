@@ -33,6 +33,6 @@ const ProfileScreen = ({navigation}) => {
 export default ProfileScreen;
 
 const styles = StyleSheet.create({
-  page: {padding: 15},
+  page: {padding: 15, backgroundColor: '#FFFFFF', flex: 1},
   wrapper: {paddingHorizontal: 25},
 });

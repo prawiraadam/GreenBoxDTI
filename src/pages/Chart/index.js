@@ -30,6 +30,7 @@ const Chart = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header title="My Basket" onPress={() => navigation.goBack()} />
+      <Gap height={20} />
       <FlatList
         keyExtractor={(item) => item.id}
         data={DATA}
@@ -71,6 +72,7 @@ export default Chart;
 const styles = StyleSheet.create({
   page: {
     flex: 1,
+    backgroundColor: '#FFFFFF',
   },
   header: {
     padding: 28,

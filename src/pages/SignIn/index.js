@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, ScrollView, Dimensions} from 'react-native';
 import {Button, Input, Gap, Link} from '../../components';
 
-
 const SignIn = ({navigation}) => {
   const [height, setHeight] = useState(Dimensions.get('window').height * 0.15);
   return (
     <View style={styles.page}>
-      <ScrollView>
-        <Gap height={height}/>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Gap height={height} />
         {/* title text */}
         <View>
           <Text style={styles.title}>Get the veggies!</Text>
@@ -27,7 +26,10 @@ const SignIn = ({navigation}) => {
         <Gap height={20} />
 
         {/* button sign in */}
-        <Button title="Sign in" onPress={() => navigation.replace('MainPage')} />
+        <Button
+          title="Sign in"
+          onPress={() => navigation.replace('MainPage')}
+        />
         <Gap height={15} />
 
         {/* section navigate to register */}
@@ -52,7 +54,7 @@ const styles = StyleSheet.create({
     padding: 40,
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   title: {fontSize: 25, fontWeight: '700'},
   subtitle: {fontSize: 14},

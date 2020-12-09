@@ -7,7 +7,7 @@ const Footer = () => {
     <View style={styles.page}>
       <View>
         <Text>Total Harga</Text>
-        <Text>Rp. 20.000</Text>
+        <Text>Rp. 2000</Text>
       </View>
       <Gap width={15} />
       <View>

@@ -4,17 +4,17 @@ import {IconAddCounter, IconMinusCounter} from '../../../assets';
 import Gap from '../Gap';
 
 const Counter = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
 
   const addNum = () => {
     setCounter(counter + 1);
   };
 
   const minusCounter = () => {
-    if (counter > 0) {
+    if (counter > 1) {
       setCounter(counter - 1);
     } else {
-      setCounter(0);
+      setCounter(1);
     }
   };
 
