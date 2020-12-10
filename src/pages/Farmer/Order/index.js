@@ -44,7 +44,10 @@ const index = () => {
       <Header title="Order"/>
       <View style={styles.screen}>
         {OrderList.map((item, index) => {
-          return <TileOrder key={index} Item={item} onPress={() => console.log('gotoDetail')}/>;
+          return <TileOrder 
+            key={index} 
+            Item={item} 
+            onPress={() => console.log('gotoDetail')}/>;
         })}
       </View>
     </>

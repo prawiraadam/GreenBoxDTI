@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { Header, TileStockItem } from "../../../components";
 import { colors } from "../../../utils";
 import IconAdd from 'react-native-vector-icons/Ionicons';
 
-const index = () => {
-
+const index = ({navigation}) => {
+  const [item, setItem] = useState({title: 'Tambahkan Sayuran', })
   const ItemList = [
     {
       id: '1',
@@ -171,14 +171,14 @@ const index = () => {
           <TileStockItem 
             key={index} 
             Item={item}
-            addPress={() => console.log('clicked')}
+            addPress={() => navigation.navigate('EditAddItem', {item})}
           />
         );
       })}
         <TouchableOpacity
           activeOpacity={0.7}
           style={styles.touchableOpacityStyle}
-          onPress={() => console.log('go to add item')}
+          onPress={() => navigation.navigate('EditAddItem', {item})}
         >
           <IconAdd name="add" size={35} color="#fff"/>
         </TouchableOpacity>

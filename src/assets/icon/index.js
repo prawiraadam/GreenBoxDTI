@@ -21,6 +21,7 @@ import IconBNI from './ic_BNI.png';
 import IconBRI from './ic_BRI.png';
 import IconMandiri from './ic_Mandiri.png';
 import IconPermataBank from './ic_PermataBank.png';
+import BackgroundUploadPhoto from './upload_photo.png';
 
 export {
   IconBack,
@@ -46,4 +47,5 @@ export {
   IconBNI,
   IconMandiri,
   IconPermataBank,
+  BackgroundUploadPhoto
 };

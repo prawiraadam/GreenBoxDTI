@@ -10,6 +10,7 @@ const Input = ({
   secureTextEntry,
   disable,
   placeholder,
+  multiline
 }) => {
   const [border, setBorder] = useState(colors.grey4);
   const onFocusForm = () => {
@@ -25,13 +26,14 @@ const Input = ({
       <TextInput
         onFocus={onFocusForm}
         onBlur={onBlurForm}
-        style={styles.input(border)}
+        style={styles.input(border, multiline)}
         value={value}
         placeholder={placeholder}
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
         editable={!disable}
         selectTextOnFocus={!disable}
+        multiline={multiline}
       />
     </View>
   );
@@ -43,10 +45,11 @@ const styles = StyleSheet.create({
   title: {
     color: colors.grey1,
   },
-  input: (border) => ({
+  input: (border, multiline) => ({
     borderWidth: 2,
     borderColor: border,
     borderRadius: 10,
     padding: 10,
+    height: multiline && 100
   }),
 });

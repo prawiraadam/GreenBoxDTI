@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, FlatList, View, Image} from 'react-native';
-import {Button, Gap} from '../../components/atoms';
-import Header from '../../components/molekul/Header';
+import {Button, Gap, Header} from '../../components';
 import CheckBox from '@react-native-community/checkbox';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { colors } from "../../utils/colors";
@@ -30,7 +29,7 @@ const DATA =[
     },
 ]
 
-const Item = ({ id, photo, name, price }) => {
+const Item = ({ id, photo, name, price, qty }) => {
     const [unSelected, setSelected] = useState(false);
 
     return (
@@ -48,7 +47,7 @@ const Item = ({ id, photo, name, price }) => {
                 <Text>Rp. {price},- /ikat</Text>
                 <View style={styles.quantity}>
                     <Ionicons name="remove-outline" size={20} color={colors.green1} />
-                    <Text>2</Text>
+                    <Text>{qty}</Text>
                     <Ionicons name="add-outline" size={20} color={colors.green1}/>
                 </View>
             </View>
@@ -71,6 +70,7 @@ const Chart = ({ navigation }) => {
                         photo = {item.photo}
                         name = {item.name}
                         price = {item.price}
+                        qty = {item.qty}
                     />
                 )}
             />
