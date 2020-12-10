@@ -8,6 +8,7 @@ import SliderBox from './SliderBox';
 import TileStockItem from './TileStockItem';
 import TileOrder from './TileOrder';
 import PaymentListBank from './PaymentListBank';
+import UnderlineText from './UnderlineText';
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   TileStockItem,
   TileOrder,
   PaymentListBank,
+  UnderlineText
 };

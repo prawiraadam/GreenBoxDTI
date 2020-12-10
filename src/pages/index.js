@@ -15,6 +15,7 @@ import OrderFarmer from './Farmer/Order';
 import ProfileFarmer from './Farmer/Profile';
 import PaymentMethod from './PaymentMethod';
 import EditAddItem from "./Farmer/EditAddItem";
+import DetailOrder from "./Farmer/DetailOrder";
 
 export {
   Splash,
@@ -33,5 +34,6 @@ export {
   OrderFarmer,
   ProfileFarmer,
   PaymentMethod,
-  EditAddItem
+  EditAddItem,
+  DetailOrder
 };

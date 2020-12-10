@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import { Header, TileOrder } from "../../../components";
 import { colors } from "../../../utils";
 
-const index = () => {
+const index = ({navigation}) => {
   const OrderList = [
     {
       id: '1',
@@ -13,8 +13,25 @@ const index = () => {
       orderId: '3212',
       orderName: 'Adam Vegetable Store',
       orderEmail: 'adamvegetable123@gmail.com',
-      total: '20.000',
-      progress: 'Processing'
+      progress: 'Processing',
+      phoneNumber: '081234567890',
+      address: 'Jl. Sukabirus 12, Bojongsoang Kab. Bandung',
+      orderItem: [
+        {
+          itemId: '1',
+          OrderVegetableName: 'Bayam',
+          OrderPrice: '20.000',
+          OrderCount: 5
+        },
+        {
+          itemId: '2',
+          OrderVegetableName: 'Kangkung',
+          OrderPrice: '20.000',
+          OrderCount: 5
+        },
+      ],
+      total: '200.000',
+      postalFee: '12.000'
     },
     {
       id: '2',
@@ -24,8 +41,25 @@ const index = () => {
       orderId: '3212',
       orderName: 'Adam Vegetable Store',
       orderEmail: 'adamvegetable123@gmail.com',
-      total: '20.000',
-      progress: 'Processing'
+      progress: 'Processing',
+      phoneNumber: '081234567890',
+      address: 'Jl. Sukabirus 12, Bojongsoang Kab. Bandung',
+      orderItem: [
+        {
+          itemId: '1',
+          OrderVegetableName: 'Bayam',
+          OrderPrice: '20.000',
+          OrderCount: 5
+        },
+        {
+          itemId: '2',
+          OrderVegetableName: 'Kangkung',
+          OrderPrice: '20.000',
+          OrderCount: 5
+        },
+      ],
+      total: '200.000',
+      postalFee: '12.000'
     },
     {
       id: '3',
@@ -35,8 +69,25 @@ const index = () => {
       orderId: '3212',
       orderName: 'Adam Vegetable Store',
       orderEmail: 'adamvegetable123@gmail.com',
-      total: '20.000',
-      progress: 'Processing'
+      progress: 'Processing',
+      phoneNumber: '081234567890',
+      address: 'Jl. Sukabirus 12, Bojongsoang Kab. Bandung',
+      orderItem: [
+        {
+          itemId: '1',
+          OrderVegetableName: 'Bayam',
+          OrderPrice: '20.000',
+          OrderCount: 5
+        },
+        {
+          itemId: '2',
+          OrderVegetableName: 'Kangkung',
+          OrderPrice: '20.000',
+          OrderCount: 5
+        },
+      ],
+      total: '200.000',
+      postalFee: '12.000'
     },
   ];
   return (
@@ -47,7 +98,7 @@ const index = () => {
           return <TileOrder 
             key={index} 
             Item={item} 
-            onPress={() => console.log('gotoDetail')}/>;
+            onPress={() => navigation.navigate('DetailOrder', {item})}/>;
         })}
       </View>
     </>

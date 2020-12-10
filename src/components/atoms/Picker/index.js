@@ -4,8 +4,27 @@ import { Picker } from "@react-native-community/picker";
 import { colors } from '../../../utils';
 import { Gap } from "../../../components";
 
-const Pickers = ({title}) => {
+const Pickers = ({title, progress}) => {
   const [selectedValue, setSelectedValue] = useState("Petani");
+  if(progress){
+    return (
+      <View>
+        <Text style={styles.title}>{title}</Text>
+        <Gap height={5}/>
+        <View style={styles.container}>
+          <Picker
+            selectedValue={selectedValue}
+            style={{ height: 50, width: '100%'}}
+            onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+          >
+            <Picker.Item label="Progress" value="progress" />
+            <Picker.Item label="On Hold" value="onhold" />
+            <Picker.Item label="Done" value="done" />
+          </Picker>
+        </View>
+      </View>
+    );
+  }
   return (
     <View>
       <Text style={styles.title}>{title}</Text>

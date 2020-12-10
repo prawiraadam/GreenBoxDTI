@@ -17,7 +17,8 @@ import {
   OrderFarmer,
   ProfileFarmer,
   PaymentMethod,
-  EditAddItem
+  EditAddItem,
+  DetailOrder
 } from '../pages';
 
 const Tab = createBottomTabNavigator();
@@ -111,6 +112,13 @@ const Router = () => {
       <Stack.Screen 
         name="EditAddItem"
         component={EditAddItem}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen 
+        name="DetailOrder"
+        component={DetailOrder}
         options={{
           headerShown: false,
         }}
