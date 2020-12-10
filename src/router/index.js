@@ -93,7 +93,7 @@ const Router = () => {
           headerShown: false,
         }}
       />
-      <Stack.Screens
+      <Stack.Screen
         name="PaymentMethod"
         component={PaymentMethod}
         options={{
