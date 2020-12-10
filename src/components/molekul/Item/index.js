@@ -12,8 +12,8 @@ const Item = ({title, photo, onPress, price, unit, store, rating }) => {
       <View style={styles.descContainer}>
         <Text style={styles.title}>{title}</Text>
         <Text>Rp. {price}/{unit}</Text>
+        <Gap height={5}/>
         <View style={styles.storeContainer}>
-          <Gap height={5}/>
           <Image source={IconStore} style={styles.storeIcon}/>
           <Text>{store}</Text>
         </View>
@@ -29,7 +29,6 @@ export default Item;
 
 const styles = StyleSheet.create({
   component: {
-    // flex: 1,
     width: '50%'
   },
   imageContainer: {

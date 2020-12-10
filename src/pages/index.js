@@ -10,9 +10,10 @@ import DescriptionItem from './DescriptionItem';
 import PhotoProfile from './PhotoProfile';
 import List from './List';
 import UpdateProfile from './UpdateProfile';
-import HomeFarmer from "./Farmer/Home";
-import OrderFarmer from "./Farmer/Order";
-import ProfileFarmer from "./Farmer/Profile";
+import HomeFarmer from './Farmer/Home';
+import OrderFarmer from './Farmer/Order';
+import ProfileFarmer from './Farmer/Profile';
+import PaymentMethod from './PaymentMethod';
 
 export {
   Splash,
@@ -29,5 +30,6 @@ export {
   UpdateProfile,
   HomeFarmer,
   OrderFarmer,
-  ProfileFarmer
+  ProfileFarmer,
+  PaymentMethod,
 };

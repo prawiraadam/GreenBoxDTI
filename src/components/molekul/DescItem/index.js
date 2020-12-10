@@ -1,10 +1,10 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View, Image} from 'react-native';
 import {SliderBox} from '..';
+import { IconStore } from "../../../assets";
+import {Counter, Gap, Rating} from '../../../components';
 
-import {Counter, Gap} from '../../atoms';
-
-const DescItem = ({images, title, price, unit, store, desc}) => {
+const DescItem = ({images, title, price, unit, store, desc, rating}) => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <SliderBox images={images} />
@@ -14,7 +14,12 @@ const DescItem = ({images, title, price, unit, store, desc}) => {
           <Text style={styles.subtitle}>
             Rp. {price}/{unit}
           </Text>
-          <Text>{store}</Text>
+          <View style={styles.storeContainer}>
+            <Image source={IconStore} style={styles.storeIcon}/>
+            <Text>{store}</Text>
+        </View>
+          <Gap height={5}/>
+          <Rating value={rating}/>
         </View>
         <View>
           <Counter />
@@ -54,5 +59,13 @@ const styles = StyleSheet.create({
   },
   title: {fontSize: 22, fontWeight: '600', marginBottom: 4},
   subtitle: {fontSize: 16, fontWeight: '600', marginBottom: 4},
+  storeContainer: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  storeIcon: {
+    height: 20,
+    width: 20
+  },
   info: {textAlign: 'center'},
 });

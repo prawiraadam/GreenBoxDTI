@@ -15,7 +15,8 @@ import {
   UpdateProfile,
   HomeFarmer,
   OrderFarmer,
-  ProfileFarmer
+  ProfileFarmer,
+  PaymentMethod,
 } from '../pages';
 
 const Tab = createBottomTabNavigator();
@@ -43,7 +44,7 @@ const BottomTabNavigatorFarmer = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Splash">
+    <Stack.Navigator initialRouteName="MainPageFarmer">
       <Stack.Screen
         name="Splash"
         component={Splash}
@@ -92,9 +93,15 @@ const Router = () => {
           headerShown: false,
         }}
       />
+<<<<<<< HEAD
       <Stack.Screen 
         name="Checkout"
         component={Checkout}
+=======
+      <Stack.Screen
+        name="PaymentMethod"
+        component={PaymentMethod}
+>>>>>>> 65f59ba73c139ee91702764bbae8e1e6e44f255c
         options={{
           headerShown: false,
         }}

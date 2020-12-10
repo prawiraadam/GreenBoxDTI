@@ -14,6 +14,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '2',
@@ -24,6 +31,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '3',
@@ -34,6 +48,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '4',
@@ -44,6 +65,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '5',
@@ -54,6 +82,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '6',
@@ -64,6 +99,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '7',
@@ -74,6 +116,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '8',
@@ -84,6 +133,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
     {
       id: '9',
@@ -94,6 +150,13 @@ const DiscoverScreen = ({navigation}) => {
       unit: 'Ikat',
       store: "Bandung's Parmer",
       rating: 5,
+      images: [
+        'https://cdn-cms.pgimgs.com/static/2020/10/3.-Panduan-Mudah-Budidaya-Kangkung-Di-Rumah.jpg',
+        'https://cdn-2.tstatic.net/pontianak/foto/bank/images/kangkung-masuk-daftar-tanaman-berbahaya-di-amerika-dilarang-dijual-disana.jpg',
+        'https://cdns.klimg.com/merdeka.com/i/w/news/2018/04/10/962408/540x270/8-khasiat-cantik-yang-bisa-didapat-cuma-dengan-makan-kangkung-tak-perlu-superfood-rev-1.jpg',
+      ],
+      desc:
+        'Kangkung (Ipomoea aquatica Forsk.) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai makanan. Kangkung banyak dijual di pasar-pasar. Kangkung banyak terdapat di kawasan Asia dan merupakan tumbuhan yang dapat dijumpai hampir di mana-mana terutama di kawasan berair. Masakan kangkung yang populer adalah ca kangkung bumbu tauco atau terasi, juga di wewarungan terdapat pelecing kangkung lombok mantap',
     },
   ];
 
@@ -122,7 +185,7 @@ const DiscoverScreen = ({navigation}) => {
                   unit={item.unit}
                   store={item.store}
                   rating={item.rating}
-                  onPress={() => navigation.navigate('DescriptionItem')}
+                  onPress={() => navigation.navigate('DescriptionItem', {item})}
                 />
               );
             })}
