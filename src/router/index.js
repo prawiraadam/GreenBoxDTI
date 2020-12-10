@@ -93,7 +93,13 @@ const Router = () => {
           headerShown: false,
         }}
       />
-<<<<<<< HEAD
+      <Stack.Screens
+        name="PaymentMethod"
+        component={PaymentMethod}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen 
         name="Checkout"
         component={Checkout}
