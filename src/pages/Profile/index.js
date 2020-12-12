@@ -24,7 +24,7 @@ const ProfileScreen = ({navigation}) => {
       <List title="My Store" type="next" />
       <Gap height={50} />
       <View style={styles.wrapper}>
-        <Button title="LOGOUT" />
+        <Button title="LOGOUT" onPress={() => navigation.navigate('SignIn')}/>
       </View>
     </View>
   );

@@ -4,8 +4,9 @@ import { Picker } from "@react-native-community/picker";
 import { colors } from '../../../utils';
 import { Gap } from "../../../components";
 
-const Pickers = ({title, progress}) => {
+const Pickers = ({title, progress, getUserType}) => {
   const [selectedValue, setSelectedValue] = useState("Petani");
+
   if(progress){
     return (
       <View>
@@ -33,7 +34,7 @@ const Pickers = ({title, progress}) => {
         <Picker
           selectedValue={selectedValue}
           style={{ height: 50, width: '100%'}}
-          onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+          onValueChange={(itemValue, itemIndex) => getUserType(itemValue)}
         >
           <Picker.Item label="Petani" value="farmer" />
           <Picker.Item label="Distributor" value="supplier" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ScrollView,
   StyleSheet,
@@ -11,6 +11,11 @@ import {ILLogo} from '../../assets';
 import {colors} from '../../utils';
 
 const SignUp = ({navigation}) => {
+  const [userType, setUserType] = useState("farmer");
+
+  const getUserType = (selected) => {
+    setUserType(selected);
+  }
   return (
     <View style={styles.screen}>
       <ScrollView
@@ -30,11 +35,11 @@ const SignUp = ({navigation}) => {
           <Gap height={10} />
           <Input title="Password" />
           <Gap height={10} />
-          <Pickers title="Pekerjaan" />
+          <Pickers title="Pekerjaan" getUserType={getUserType}/>
           <Gap height={20} />
           <Button
             title="Selanjutnya"
-            onPress={() => navigation.replace('MainPage')}
+            onPress={userType=="farmer" ? () => navigation.replace('MainPageFarmer') : navigation.replace('MainPage')}
           />
           <Gap height={20} />
         </View>
