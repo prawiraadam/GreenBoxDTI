@@ -11,12 +11,15 @@ import {ILLogo} from '../../assets';
 import {colors} from '../../utils';
 
 const SignUp = ({navigation}) => {
-  const [userType, setUserType] = useState("Petani");
+  const [userType, setUserType] = useState("farmer");
 
   const getUserType = (selected) => {
     console.log(selected);
     setUserType(selected);
   }
+
+  const gotoDistributorPage = () => navigation.replace('MainPage');
+
   return (
     <View style={styles.screen}>
       <ScrollView
@@ -36,11 +39,11 @@ const SignUp = ({navigation}) => {
           <Gap height={10} />
           <Input title="Password" />
           <Gap height={10} />
-          <Pickers title="Pekerjaan" getUserType={getUserType}/>
+          <Pickers title="Pekerjaan"/>
           <Gap height={20} />
           <Button
             title="Selanjutnya"
-            onPress={userType=="Petani" ? () => navigation.replace('MainPageFarmer') : () => navigation.replace('MainPage')}
+            onPress={gotoDistributorPage}
           />
           <Gap height={20} />
         </View>

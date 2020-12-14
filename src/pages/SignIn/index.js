@@ -28,7 +28,7 @@ const SignIn = ({navigation}) => {
         {/* button sign in */}
         <Button
           title="Sign in"
-          onPress={() => navigation.replace('MainPage')}
+          onPress={() => navigation.replace('MainPageFarmer')}
         />
         <Gap height={15} />
 
