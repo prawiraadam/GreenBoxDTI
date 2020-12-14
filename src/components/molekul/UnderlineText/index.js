@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { colors } from "../../../utils";
-import { Gap } from "../../../components";
+import Gap from "../../../components/atoms/Gap";
 
 const index = ({title, placehorder}) => {
   return (

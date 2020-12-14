@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import { Gap } from "../../../components";
+import Gap from "../../../components/atoms/Gap";
 import { colors } from "../../../utils";
 import Icon from 'react-native-vector-icons/AntDesign';
 

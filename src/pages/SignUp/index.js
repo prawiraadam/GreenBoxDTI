@@ -11,9 +11,10 @@ import {ILLogo} from '../../assets';
 import {colors} from '../../utils';
 
 const SignUp = ({navigation}) => {
-  const [userType, setUserType] = useState("farmer");
+  const [userType, setUserType] = useState("Petani");
 
   const getUserType = (selected) => {
+    console.log(selected);
     setUserType(selected);
   }
   return (
@@ -39,7 +40,7 @@ const SignUp = ({navigation}) => {
           <Gap height={20} />
           <Button
             title="Selanjutnya"
-            onPress={userType=="farmer" ? () => navigation.replace('MainPageFarmer') : navigation.replace('MainPage')}
+            onPress={userType=="Petani" ? () => navigation.replace('MainPageFarmer') : () => navigation.replace('MainPage')}
           />
           <Gap height={20} />
         </View>
