@@ -16,13 +16,13 @@ const UpdateProfile = ({navigation, route}) => {
           {/* profile pic */}
           <View style={styles.uploadContainer}>
             <TouchableOpacity onPress={() => console.log('open camera')}>
-              <ImageBackground source={BackgroundUploadPhoto} style={styles.uploadPhoto}>
+              <ImageBackground source={{uri: profile.photo}} style={styles.uploadPhoto}>
                 <Icon name="camera" size={30} color={colors.black1} />
               </ImageBackground>
             </TouchableOpacity>
           </View>
           <Gap height={24}/>
-          <Input title="Nama Toko" value={profile.name}/>
+          <Input title="Nama" value={profile.name}/>
           <Gap height={10} />
           <Input title="Email" value={profile.email} />
           <Gap height={10} />
