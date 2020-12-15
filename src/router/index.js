@@ -18,7 +18,9 @@ import {
   ProfileFarmer,
   PaymentMethod,
   EditAddItem,
-  DetailOrder
+  DetailOrder,
+  TransactionSuccess,
+  Transaction
 } from '../pages';
 
 const Tab = createBottomTabNavigator();
@@ -119,6 +121,20 @@ const Router = () => {
       <Stack.Screen 
         name="DetailOrder"
         component={DetailOrder}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen 
+        name="TransactionSuccess"
+        component={TransactionSuccess}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen 
+        name="Transaction"
+        component={Transaction}
         options={{
           headerShown: false,
         }}

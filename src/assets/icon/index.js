@@ -19,6 +19,7 @@ import IconBankTransfer from './ic_BankTransfer.svg';
 import IconBCA from './ic_BCA.png';
 import IconBNI from './ic_BNI.png';
 import IconBRI from './ic_BRI.png';
+import IconCopy from './ic_copy.png';
 import IconMandiri from './ic_Mandiri.png';
 import IconPermataBank from './ic_PermataBank.png';
 import BackgroundUploadPhoto from './upload_photo.png';
@@ -47,5 +48,6 @@ export {
   IconBNI,
   IconMandiri,
   IconPermataBank,
-  BackgroundUploadPhoto
+  BackgroundUploadPhoto,
+  IconCopy
 };

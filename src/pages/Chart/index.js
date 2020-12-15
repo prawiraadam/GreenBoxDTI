@@ -104,7 +104,8 @@ export default Chart;
 
 const styles = StyleSheet.create({
     page:{
-        flex: 1
+        flex: 1,
+        backgroundColor: 'white'
     },
     header: {
         padding: 28,

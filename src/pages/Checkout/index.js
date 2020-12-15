@@ -126,7 +126,7 @@ const Checkout = ({ navigation }) => {
                     <Button
                         title='Create Order'
                         onPress={() => {
-                            // Masih kosong
+                            navigation.navigate('Transaction')
                         }}
                     />
                 </View>
@@ -139,7 +139,8 @@ export default Checkout;
 
 const styles = StyleSheet.create ({
     page:{
-        flex:1
+        flex:1,
+        backgroundColor: 'white'
     },
     body:{
         margin: 16
