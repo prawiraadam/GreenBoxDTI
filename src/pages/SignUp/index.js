@@ -19,6 +19,7 @@ const SignUp = ({navigation}) => {
   }
 
   const gotoDistributorPage = () => navigation.replace('MainPage');
+  const gotoFarmerPage = () => navigation.replace('MainPageFarmer');
 
   return (
     <View style={styles.screen}>
