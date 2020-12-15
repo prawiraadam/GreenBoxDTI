@@ -11,15 +11,20 @@ import {ILLogo} from '../../assets';
 import {colors} from '../../utils';
 
 const SignUp = ({navigation}) => {
-  const [userType, setUserType] = useState("farmer");
-
-  const getUserType = (selected) => {
-    console.log(selected);
-    setUserType(selected);
-  }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
 
   const gotoDistributorPage = () => navigation.replace('MainPage');
   const gotoFarmerPage = () => navigation.replace('MainPageFarmer');
+
+  const Navigate = () => {
+    if (email == "distributor1@gmail.com" && password=="123123"){
+      gotoDistributorPage();
+    } else if (email == "farmer1@gmail.com" && password=="123123"){
+      gotoFarmerPage();
+    }
+  } 
 
   return (
     <View style={styles.screen}>
@@ -36,15 +41,24 @@ const SignUp = ({navigation}) => {
         <View style={styles.inputContainer}>
           <Input title="Nama Lengkap" />
           <Gap height={10} />
-          <Input title="Email" />
+          <Input 
+            title="Email"
+            onChangeText={(value) => setEmail(value)} 
+            value={email}
+          />
           <Gap height={10} />
-          <Input title="Password" />
+          <Input 
+            title="Password" 
+            secureTextEntry={true}
+            onChangeText={(value) => setPassword(value)} 
+            value={password}
+          />
           <Gap height={10} />
           <Pickers title="Pekerjaan"/>
           <Gap height={20} />
           <Button
             title="Selanjutnya"
-            onPress={gotoDistributorPage}
+            onPress={Navigate}
           />
           <Gap height={20} />
         </View>
